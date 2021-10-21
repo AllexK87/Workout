@@ -1,0 +1,31 @@
+// Размеры
+$maxW:1200;  // *Для миксинов 1180 + 20padding
+$maxWidth: $maxW + px;
+$minWidtch: 320px;
+
+// Font-style
+$font-main: 'Poppins', sans-serif;
+
+// Font-sizes
+
+// Font-weight
+$font-weight: (
+    "light": 300,
+    "regular": 400,
+    "medium":500,
+    "semi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "black": 900
+);
+
+// Color
+$color-background: #1F1C26;
+$color-text: #fff;
+$color-text2: rgba(255, 255, 255, 0.36);
+$color-text3: #F2F2F2;
+$color-pink: #F24B88;
+$color-dark-pink: #59253E;
+$color-dark: #0D0D0D;
+$color-dark-silver: #332F3C;
+$color-burger: rgb(255, 255, 255);
