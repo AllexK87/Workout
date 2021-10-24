@@ -5,4 +5,4 @@ menu.onclick = () =>{
     const open = document.querySelector('.header__menu')
     open.classList.toggle('menu-open')
 }
-console.log("ytllo")
+// console.log("ytllo")
