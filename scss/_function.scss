@@ -1,4 +1,9 @@
 // Font-weight
 @function font-weight($weight-name) {
     @return map-get($font-weight, $weight-name)
-}
+};
+
+// SIZE
+@function size ($size) {
+    @return $size / $base-saze + rem;
+};

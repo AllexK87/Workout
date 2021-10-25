@@ -44,7 +44,7 @@ aside, nav, footer, header, section, main {
 html,
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
   color: #fff;
   background: #1F1C26;
@@ -56,6 +56,39 @@ body {
   padding: 0 0.625rem;
 }
 
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 2.8125rem;
+  color: #ffff;
+  position: relative;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: #59253E;
+}
+
+@media (max-width: 769px) {
+  .title::before {
+    width: 100%;
+  }
+}
+
+.btn {
+  color: #fff;
+  font-weight: 600;
+  background-color: #F24B88;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
 /* HEADER */
 .header {
   position: -webkit-sticky;
@@ -64,6 +97,7 @@ body {
   left: 0;
   width: 100%;
   margin: 2rem 0 3rem;
+  background: #1F1C26;
   z-index: 99;
 }
 
@@ -256,6 +290,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 6.25rem;
 }
 
 @media (max-width: 769px) {
@@ -267,6 +302,7 @@ body {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    margin-bottom: 3.125rem;
   }
 }
 
@@ -364,7 +400,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 3rem;
   }
 }
 
@@ -509,4 +544,145 @@ body {
   font-size: 1.125rem;
   color: #fff;
   font-weight: 600;
+}
+
+/* TRAINING */
+.training {
+  margin: 0 0 6.25rem 0;
+}
+
+@media (max-width: 769px) {
+  .training {
+    margin: 0 0 1.25rem 0;
+  }
+}
+
+.training .training__titlebx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 769px) {
+  .training .training__titlebx {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.training .training__titlebx a {
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (max-width: 769px) {
+  .training .training__titlebx a {
+    display: none;
+  }
+}
+
+.training .training__cardbx {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(auto, 368px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(auto, 368px));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  row-gap: 1.25rem;
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.training .training__cardbx .training__card .training__card__imgbx {
+  position: relative;
+  padding: 0 0 70% 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.training .training__cardbx .training__card .training__card__imgbx img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.training .training__cardbx .training__card .training__card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card .training__card__title {
+    margin: -1.875rem 0.3125rem;
+    position: relative;
+  }
+}
+
+.training .training__cardbx .training__card p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.36);
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card p {
+    display: none;
+  }
+}
+
+.training .training__cardbx .training__card .training__card__btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card .training__card__btn {
+    display: none;
+  }
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card + .training__card + .training__card {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card + .training__card + .training__card .training__card__title {
+    margin: -1.875rem 0.3125rem;
+    position: relative;
+  }
+}
+
+@media (max-width: 769px) {
+  .training .training__cardbx .training__card + .training__card + .training__card .training__card__btn {
+    display: inline-block;
+    margin: 1.25rem auto 0rem;
+  }
 }

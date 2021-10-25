@@ -14,7 +14,7 @@
 html,
 body {
     font-family: $font-main;
-    font-size: 1rem;
+    font-size: $base-saze + px;
     font-weight: font-weight(regular);
     color: $color-text;
     background: $color-background;
@@ -26,6 +26,35 @@ body {
     padding: 0 0.625rem;
 }
 
+.title {
+    font-size: 1.875rem;
+    font-weight: font-weight(bold);
+    text-transform: uppercase;
+    line-height: 2.8125rem;
+    color: #ffff;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 70px;
+        height: 4px;
+        background: $color-dark-pink;
+        @media (max-width: 769px) {
+            width: 100%;
+        }
+    }
+}
+
+.btn {
+    color: $color-text;
+    font-weight: font-weight(semi-bold);
+    background-color: $color-pink;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
 /* HEADER */
 .header {
     position: sticky;
@@ -33,6 +62,7 @@ body {
     left: 0;
     width: 100%;
     margin: 2rem 0 3rem;
+    background: $color-background;
     z-index: 99;
     @media (max-width: 769px) {
         margin: 0.625rem 0;
@@ -181,10 +211,12 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    margin-bottom: 6.25rem;
     @media (max-width: 769px) {
         grid-template-columns: 1fr;
         grid-template-rows: minmax(280px, auto) 1fr;
         align-items: stretch;
+        margin-bottom: size(50);
     }
 
     .intro__txtbx {
@@ -248,7 +280,7 @@ body {
             justify-content: space-between;
             @media (max-width: 769px) {
                 justify-content: center;
-                margin-bottom: 3rem;
+                // margin-bottom: 3rem;
             }
 
             button {
@@ -351,6 +383,114 @@ body {
                     font-size: $font-18px;
                     color: $color-text;
                     font-weight: font-weight(semi-bold);
+                }
+            }
+        }
+    }
+}
+
+/* TRAINING */
+.training {
+    margin: 0 0 size(100) 0; 
+    @media (max-width: 769px) {
+        margin: 0 0 size(20) 0;
+    }   
+
+    .training__titlebx {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: size(40);
+        @media (max-width: 769px) {
+            justify-content: center;
+        }
+
+        a {
+            font-size: $font-14px;
+            color: $color-text;
+            text-transform: uppercase;
+            @media (max-width: 769px) {
+                display: none;
+            }
+        }
+    }
+
+    .training__cardbx {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 368px));
+        justify-content: space-between;
+        row-gap: size(20);
+
+        .training__card {
+            @media (max-width: 769px) {
+                margin-bottom: size(30);
+            }
+            
+            .training__card__imgbx {
+                position: relative;
+                padding: 0 0 70% 0;
+                border-radius: 10px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                }
+            }   
+
+            .training__card__title {
+                font-size: size(18);
+                font-weight: font-weight(semi-bold);
+                color: $color-text;
+                text-transform: uppercase;
+                margin: size(16) 0;
+                @media (max-width: 769px) {
+                    margin: size(-30) size(5);
+                    position: relative;
+                }
+            }
+
+            p {
+                font-size: size(14);
+                font-weight: font-weight(regular);
+                color: $color-text2;
+                margin-bottom: size(20);
+                @media (max-width: 769px) {
+                    display: none;
+                }
+            }
+
+            .training__card__btn {
+                display: inline-block;
+                padding: size(12) size(16);
+                @media (max-width: 769px) {
+                    display: none;
+                }
+            }       
+        }
+
+        .training__card + .training__card + .training__card {
+            @media (max-width: 769px) {
+                display: grid;
+            }
+            
+            .training__card__title {
+                @media (max-width: 769px) {
+                    margin: size(-30) size(5);
+                    position: relative;
+                }
+            }
+
+            .training__card__btn {
+                @media (max-width: 769px) {
+                    display: inline-block;
+                    margin: size(20) auto size(0);
                 }
             }
         }
