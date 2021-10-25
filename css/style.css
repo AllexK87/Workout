@@ -686,3 +686,75 @@ body {
     margin: 1.25rem auto 0rem;
   }
 }
+
+/* TEAM */
+.team .title {
+  margin: 0 0 2.5rem 0;
+}
+
+.team .team__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(261px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+}
+
+.team .team__box .tem__card {
+  background: #fff;
+  display: -ms-grid;
+  display: grid;
+}
+
+.team .team__box .tem__card .tem__card__img {
+  position: relative;
+  padding: 0 0 70% 0;
+}
+
+.team .team__box .tem__card .tem__card__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  display: block;
+}
+
+.team .team__box .tem__card .tem__card__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #0D0D0D;
+  padding: 1.3125rem 0 0 0.75rem;
+}
+
+.team .team__box .tem__card .tem__card__post {
+  font-size: 0.8125rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #332F3C;
+  padding: 0 0 0.625rem 0.75rem;
+}
+
+.team .team__box .tem__card .tem__card__txt {
+  font-size: 0.75rem;
+  color: #0D0D0D5C;
+  text-align: center;
+  padding: 0 0.75rem;
+  margin-bottom: 3.125rem;
+}
+
+.team .team__box .tem__card .tem__card__btn {
+  display: inline-block;
+  padding: 0.75rem 0.9375rem;
+  margin: 0 0.75rem 0.75rem 0;
+  justify-items: right;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
